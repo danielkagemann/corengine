@@ -2,7 +2,7 @@
 # basic makefile for coreengine
 #
 CC = @g++
-CFLAGS = -pedantic -Wno-variadic-macros -g -O0 -I/usr/include -DLINUXBUILD -DCOREENGINE
+CFLAGS = -pedantic -Wno-variadic-macros -g -O0 -I/usr/include -I SFML/include -DLINUXBUILD -DCOREENGINE
 LDFLAGS= -L /usr/lib 
 LIBS = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
@@ -14,7 +14,7 @@ all: header $(SOURCES) $(TARGET)
 
 $(TARGET): $(OBJECTS)
 	@echo "-------------------------------------------------------------------"
-	@echo "Building target..."
+	@echo "Linking target..."
 	$(CC) $(LDFLAGS) $(OBJECTS) $(LIBS) -o $@
 	@echo "Done."
 

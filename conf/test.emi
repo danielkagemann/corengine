@@ -1,0 +1,18 @@
+scene 0
+num 100,0.5,pulse
+
+zone rect=100,200,110,200
+
+init dot=10
+init scale=0.8,1
+init alpha=10,255
+init color=999999
+init positionabs=@1
+init velocity=0,0,-2,-1
+init offsetpos=4,4
+
+action lineardrag=0.02
+action accelerate=0,-0.01
+action randomdrift=0.1,0
+action move
+action fade=2

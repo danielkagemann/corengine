@@ -16,7 +16,7 @@ namespace coresystem {
     enum {
       type_sinus = 0,
       type_sinx,
-      type_siny,
+      type_siny
     };
   public:
 
