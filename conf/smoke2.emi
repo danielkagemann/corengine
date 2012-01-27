@@ -1,0 +1,19 @@
+scene 0
+num 20,01.2,pulse
+
+zone rect=318,400,322,400
+
+init color=ffffff  
+init alpha=100,120
+init positionabs=@1
+init velocity=0.0,0.0,-2.5,-1.8
+init age=30,40
+init scale=0.8,1.2
+init dot=4
+
+action age
+action move
+action scale=0.3
+action lineardrag=0.001
+action fade=2
+action randomdrift=0.4,0.0

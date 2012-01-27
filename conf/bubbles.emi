@@ -1,0 +1,15 @@
+scene 0
+num 10,0.8,pulse
+
+init dot=4
+init positionabs=rect=320,480,320,520
+init color=ffffff
+init alpha=40,200
+init age=200,400
+init velocity=0,0,-2,-0.8
+init scale=0.4,2.2
+
+action age
+action move
+action death=0,0,640,200,yes
+action randomdrift=0.12,0

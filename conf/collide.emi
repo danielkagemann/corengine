@@ -1,0 +1,23 @@
+# 100 bubbles
+scene 0
+num 10,0
+
+# same size for all
+init dot=10
+
+# white 
+init color=ffffff
+init alpha=200,255
+
+# starting from above
+init positionabs=rect=0,0,640,10
+
+# no velo in x direction. just falling down
+init velocity=0,0,0.5,1.2
+
+# actions (moving, gravity=acceleration with speedlimi, boundingbox with friction, collision detecion)
+action move
+action accelerate=0,0.03
+action.speedlimit=3,3
+action boundingbox=0,0,640,480,0.8
+action collide

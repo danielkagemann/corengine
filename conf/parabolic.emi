@@ -1,0 +1,16 @@
+scene 0
+num 30,0.6
+
+init dot=6
+init positionabs=rect=620,400,640,420
+init color=ffffff
+init alpha=40,200
+init age=40,80
+init velocity=-1.4,-1.3,-2.5,-2.5
+
+action age
+action fade=2
+action accelerate=0,0.06
+action move
+action death=0,0,640,480,false
+action randomdrift=0,-0.2
