@@ -25,9 +25,6 @@
 		9B40B00412930CDD00726FE8 /* actionbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B40AFF812930CDD00726FE8 /* actionbase.cpp */; };
 		9B40B00D12930D0400726FE8 /* initbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B40B00C12930D0400726FE8 /* initbase.cpp */; };
 		9B40B01712930D3000726FE8 /* zonebase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B40B01512930D3000726FE8 /* zonebase.cpp */; };
-		9B40B02C12930D6300726FE8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B40B02912930D6300726FE8 /* circle.png */; };
-		9B40B02D12930D6300726FE8 /* m1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B40B02A12930D6300726FE8 /* m1.png */; };
-		9B40B02E12930D6300726FE8 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B40B02B12930D6300726FE8 /* snow.png */; };
 		9B7B01C5130F042400DA1704 /* colorscale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B01C3130F042400DA1704 /* colorscale.cpp */; };
 		9B8E7C39128C67220093E6BC /* emitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E7C37128C67220093E6BC /* emitter.cpp */; };
 		9BB247041240926900D5C854 /* particlesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BB247031240926900D5C854 /* particlesystem.cpp */; };
@@ -87,6 +84,8 @@
 		9BB247031240926900D5C854 /* particlesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particlesystem.cpp; sourceTree = "<group>"; };
 		9BF28C341240795100B828D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF28C351240795100B828D7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9BF90B9314D9CA9000766424 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		9BF90B9414D9CA9000766424 /* path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = path.h; sourceTree = "<group>"; };
 		9BFD5E8B12A592AD00AD57D6 /* boundingbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boundingbox.h; sourceTree = "<group>"; };
 		9BFD5E8C12A592AD00AD57D6 /* collide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collide.h; sourceTree = "<group>"; };
 		9BFD5EA512A5952000AD57D6 /* blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = blur.h; path = filter/blur.h; sourceTree = "<group>"; };
@@ -137,6 +136,8 @@
 		9B8E7C2B128C67170093E6BC /* actions */ = {
 			isa = PBXGroup;
 			children = (
+				9BF90B9314D9CA9000766424 /* color.h */,
+				9BF90B9414D9CA9000766424 /* path.h */,
 				9B9A842F12ECA73500249335 /* rotate.h */,
 				9B9A843012ECA73500249335 /* trail.h */,
 				9BFD5E8B12A592AD00AD57D6 /* boundingbox.h */,
@@ -277,6 +278,7 @@
 				A01FB6A50F07CF6E000AAC7B /* Resources */,
 				A01FB6A60F07CF6E000AAC7B /* Sources */,
 				A01FB6A70F07CF6E000AAC7B /* Frameworks */,
+				9BF90B8E14D8840600766424 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -318,9 +320,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B40B02C12930D6300726FE8 /* circle.png in Resources */,
-				9B40B02D12930D6300726FE8 /* m1.png in Resources */,
-				9B40B02E12930D6300726FE8 /* snow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +338,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "perl -w documentation.pl";
+		};
+		9BF90B8E14D8840600766424 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R $BUILT_PRODUCTS_DIR/$TARGET_NAME.app /Volumes/myContent/coding/projects/games/corengine\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -391,7 +403,7 @@
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/SFML.framework/Headers//**";
 				GCC_PREPROCESSOR_DEFINITIONS = "COREENGINE=1";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Debug;
@@ -404,7 +416,7 @@
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/SFML.framework/Headers//**";
 				GCC_PREPROCESSOR_DEFINITIONS = "COREENGINE=1";
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;

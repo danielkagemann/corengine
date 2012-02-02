@@ -27,24 +27,23 @@ namespace coresystem {
       m_rgb[2] = b;
     }
 
+#define CALC(val,id)  val = (((int)val - m_rgb[id]) < 0) ? 0 : (((int)val - m_rgb[id]) > 255) ? 255 : (val-m_rgb[id])
+
     virtual void update (emitter* em, particle* p, float dt)
     {
       if (p->isDead == false) {
-        p->color.r -= m_rgb[0]; 
-        if (p->color.r < 0)  
-          p->color.r = 0; 
-        else if (p->color.r > 255) 
-          p->color.r = 255;
-        p->color.g -= m_rgb[1]; 
-        if (p->color.g < 0)  
-          p->color.g = 0; 
-        else if (p->color.g > 255) 
-          p->color.g = 255;
-        p->color.b -= m_rgb[2]; 
-        if (p->color.b < 0)  
-          p->color.b = 0; 
-        else if (p->color.b > 255) 
-          p->color.b = 255;
+      
+         if (zoneimpact(p->position)==false) {
+            return;
+         }
+         CALC(p->color.r, 0);
+         CALC(p->color.g, 1);
+         CALC(p->color.b, 2);
+          
+         //# in case of a shape we have to set the color there
+         if (p->shape.GetImage() != NULL) {
+            p->shape.SetColor (p->color);
+         }          
       }
     }
 protected:
