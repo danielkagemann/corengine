@@ -84,6 +84,7 @@
 		9BB247031240926900D5C854 /* particlesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particlesystem.cpp; sourceTree = "<group>"; };
 		9BF28C341240795100B828D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BF28C351240795100B828D7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9BF2CD3114E334A300776382 /* mtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtime.h; sourceTree = "<group>"; };
 		9BF90B9314D9CA9000766424 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
 		9BF90B9414D9CA9000766424 /* path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = path.h; sourceTree = "<group>"; };
 		9BFD5E8B12A592AD00AD57D6 /* boundingbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boundingbox.h; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		9B40B00512930CF300726FE8 /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				9BF2CD3114E334A300776382 /* mtime.h */,
 				9B7B01C3130F042400DA1704 /* colorscale.cpp */,
 				9B7B01C4130F042400DA1704 /* colorscale.h */,
 				9B40B00612930CF300726FE8 /* helper.h */,
@@ -250,8 +252,6 @@
 		A01FB6B20F07CF80000AAC7B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				9B2A21F712F88CC9007BD5AF /* record.cpp */,
-				9B2A21F812F88CC9007BD5AF /* record.h */,
 				9BFD5EA412A594F400AD57D6 /* filter */,
 				9B40B02812930D6300726FE8 /* data */,
 				9B40B00512930CF300726FE8 /* helper */,
@@ -264,6 +264,8 @@
 				9BF28C341240795100B828D7 /* Info.plist */,
 				9BF28C351240795100B828D7 /* main.cpp */,
 				9B8E7C3E128C673C0093E6BC /* particle.h */,
+				9B2A21F712F88CC9007BD5AF /* record.cpp */,
+				9B2A21F812F88CC9007BD5AF /* record.h */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -294,6 +296,9 @@
 /* Begin PBXProject section */
 		A01FB69C0F07CF63000AAC7B /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
 			buildConfigurationList = A01FB69F0F07CF63000AAC7B /* Build configuration list for PBXProject "corengine" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;

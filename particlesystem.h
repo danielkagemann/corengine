@@ -27,7 +27,7 @@ namespace coresystem
 
     int numberOfParticles ();
 
-    void render (sf::RenderWindow& wnd);
+    void render (sf::RenderWindow& wnd,bool zonedisplay=false);
     
   protected:
     std::vector<emitter*>		m_emitters;

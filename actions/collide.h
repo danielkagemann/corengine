@@ -17,6 +17,10 @@ namespace coresystem {
     {
       if (p->isDead == false) {
 
+         if (zoneimpact(p->position)==false) {
+            return;
+         }
+
         //# check the other particles
         for (int i = 0; i < static_cast<int> (em->getParticles().size()); i++) {
           //# ignore us

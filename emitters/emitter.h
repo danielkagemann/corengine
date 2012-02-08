@@ -71,7 +71,7 @@ namespace coresystem
     bool setnumber ();
     void init ();
 
-    void render (sf::RenderWindow& wnd);
+    void render (sf::RenderWindow& wnd, bool zonedisplay=false);
 
     void addAction (actionbase* a);
     
@@ -100,7 +100,7 @@ namespace coresystem
 
   protected:
     std::vector<particle*>            m_particle;
-    int           			              m_newobjects;
+    int           			           m_newobjects;
     sf::Clock                         m_timer;
     float                             m_timerate;
     std::vector<Scene*>               m_scenes;

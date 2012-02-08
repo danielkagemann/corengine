@@ -82,6 +82,7 @@ int main(int argc, char* argv[])
     emi->init();
 
     bool    quit = false;
+    bool    display_zones = true;
     char    infoText[300];
 
     sf::Color     foreColor = FG_COLOR;
@@ -89,7 +90,7 @@ int main(int argc, char* argv[])
     
     //# autoreload feature
     FileInfo			fileinfo (argv[1]);
-    Record    		recording;
+    Record           recording;
 
     // Start game loop
     while (App.IsOpened() && quit==false) {
@@ -112,6 +113,9 @@ int main(int argc, char* argv[])
             case sf::Key::S:
               recording.Stop ();
               break;
+            case sf::Key::Z:
+                display_zones = !display_zones;
+                break;
             case sf::Key::I:
               if (backColor == BG_COLOR) {
                 backColor = FG_COLOR;
@@ -132,7 +136,7 @@ int main(int argc, char* argv[])
       if (recording.IsRecording ()==false) {
 
         //# 'A' for recording 
-        sf::String help ("[A] start recording - [S] stop recording - [I] invert colors", sf::Font::GetDefaultFont (), 13);
+        sf::String help ("[A] start recording - [S] stop recording - [I] invert colors - [Z] display zones", sf::Font::GetDefaultFont (), 12);
         help.SetColor(foreColor);
         help.SetPosition (2,5);
         App.Draw (help);
@@ -146,14 +150,14 @@ int main(int argc, char* argv[])
       
       //# message ?
       if (msg.size() > 0) {
-      	sf::String m (msg.c_str(),sf::Font::GetDefaultFont(),13);
+      	sf::String m (msg.c_str(),sf::Font::GetDefaultFont(),12);
         m.SetPosition (10,450);
         m.SetColor(foreColor);
         App.Draw (m);
       }
 
       //# draw particle system
-      system.render (App);
+      system.render (App, display_zones);
       // Finally, display the rendered frame on screen
       App.Display();
 

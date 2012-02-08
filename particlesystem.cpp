@@ -43,10 +43,10 @@ void particlesystem::removeEmitter (emitter* obj)
   }
 }
 /*-------------------------------------------------------------------*/
-void particlesystem::render (sf::RenderWindow& wnd)
+void particlesystem::render (sf::RenderWindow& wnd,bool zonedisplay)
 {
 	int	i;
-  for (i = 0; i < static_cast<int> (m_emitters.size()); m_emitters[i]->render(wnd), i++);
+  for (i = 0; i < static_cast<int> (m_emitters.size()); m_emitters[i]->render(wnd,zonedisplay), i++);
 }
 /*-------------------------------------------------------------------*/
 int particlesystem::numberOfEmitter ()

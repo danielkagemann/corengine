@@ -1,19 +1,23 @@
+zone rect=290,0,310,10
+zone rect=290,450,500,480
+zone rect=500,0,640,480
 scene 0
-num 10,0.8,pulse
+num 500,1,pulse
 
-zone rect=0,300,640,400
-
-init dot=4
-init positionabs=rect=320,480,320,520
 init color=ffffff
-init alpha=40,200
-init age=200,400
-init velocity=0,0,-2,-0.8
-init scale=0.8,2.2
+init alpha=140,240
+init dot=5
+init scale=0.8,2.3
+init positionabs=@1
 
-action age
+action accelerate=0,0.2
 action move
-action death=0,0,640,200,yes
-action randomdrift=0.12,0
 
-action @1,color=0,4,4
+action boundingbox=0,0,640,480,0.2
+action path=sinus-x,3,25
+
+action @2,accelerate=0.3,-0.4
+
+action @3,fade=1
+action @3,accelerate=0,-0.5
+action @2,scale=0.04
