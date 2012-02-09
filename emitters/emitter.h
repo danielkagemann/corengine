@@ -91,7 +91,7 @@ namespace coresystem
 
   private: 
     void handleinitializers (particle* p);
-    void handleactions      (int pidx);
+    void handleactions      (int pidx, float elapsed);
     void creator            (bool initial=false);
 
     void removeParticles ();

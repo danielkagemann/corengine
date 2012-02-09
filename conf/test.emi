@@ -2,7 +2,7 @@ zone rect=290,0,310,10
 zone rect=290,450,500,480
 zone rect=500,0,640,480
 scene 0
-num 500,1,pulse
+num 10,1,pulse
 
 init color=ffffff
 init alpha=140,240

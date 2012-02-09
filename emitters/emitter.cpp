@@ -115,7 +115,7 @@ void emitter::render (sf::RenderWindow& wnd, bool zonedisplay)
       }
       
       //# actions
-      handleactions(i);
+      handleactions(i, 1.f);
       
       //# draw particle
       m_particle[i]->Draw (wnd);
@@ -158,11 +158,11 @@ bool emitter::setnumber ()
          break;
       case Scene::CreatePulse:
       
-         if (timerate / num <= 0.4f) {
+         /*if (timerate / num <= 0.4f) {
             m_newobjects = num * 0.4;
             m_timerate   = 0.4f;
          }
-         else {
+         else*/ {
             m_newobjects = 1;
             m_timerate   = timerate / num;
          }
@@ -260,14 +260,13 @@ void emitter::handleinitializers (particle* p)
    }
 }
 /*-------------------------------------------------------------------*/
-void emitter::handleactions      (int pidx)
+void emitter::handleactions      (int pidx, float elapsed)
 {
    Scene* pcurrent = m_scenes.front ();
    
    int a;
-   float dt = 1.0;
    for (a = 0; a < static_cast<int> (pcurrent->actions.size()); a++) {
-      pcurrent->actions[a]->update(this, m_particle[pidx],dt);
+      pcurrent->actions[a]->update(this, m_particle[pidx],elapsed);
    }
 }
 /*-------------------------------------------------------------------*/

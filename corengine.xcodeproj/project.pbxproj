@@ -138,27 +138,27 @@
 		9B8E7C2B128C67170093E6BC /* actions */ = {
 			isa = PBXGroup;
 			children = (
-				9BF90B9314D9CA9000766424 /* color.h */,
-				9BF90B9414D9CA9000766424 /* path.h */,
-				9B9A842F12ECA73500249335 /* rotate.h */,
-				9B9A843012ECA73500249335 /* trail.h */,
-				9BFD5E8B12A592AD00AD57D6 /* boundingbox.h */,
-				9BFD5E8C12A592AD00AD57D6 /* collide.h */,
-				9B26CCC0129ED862006B8181 /* slowdown.h */,
-				9B26CCC1129ED862006B8181 /* stop.h */,
 				9B40AFF712930CDD00726FE8 /* accelerate.h */,
 				9B40AFF812930CDD00726FE8 /* actionbase.cpp */,
 				9B40AFF912930CDD00726FE8 /* actionbase.h */,
 				9B40AFFA12930CDD00726FE8 /* age.h */,
+				9BFD5E8B12A592AD00AD57D6 /* boundingbox.h */,
+				9BFD5E8C12A592AD00AD57D6 /* collide.h */,
+				9BF90B9314D9CA9000766424 /* color.h */,
 				9B40AFFC12930CDD00726FE8 /* death.h */,
 				9B40AFFD12930CDD00726FE8 /* fade.h */,
 				9B40AFFE12930CDD00726FE8 /* lineardrag.h */,
 				9B40AFFF12930CDD00726FE8 /* morph.h */,
 				9B40B00012930CDD00726FE8 /* move.h */,
+				9BF90B9414D9CA9000766424 /* path.h */,
 				9B40B00112930CDD00726FE8 /* randomdrift.h */,
-				9B40B00212930CDD00726FE8 /* scale.h */,
-				9B40B00312930CDD00726FE8 /* speedlimit.h */,
 				9B9A840B12EB0B0500249335 /* randompos.h */,
+				9B9A842F12ECA73500249335 /* rotate.h */,
+				9B40B00212930CDD00726FE8 /* scale.h */,
+				9B26CCC0129ED862006B8181 /* slowdown.h */,
+				9B40B00312930CDD00726FE8 /* speedlimit.h */,
+				9B26CCC1129ED862006B8181 /* stop.h */,
+				9B9A843012ECA73500249335 /* trail.h */,
 			);
 			path = actions;
 			sourceTree = "<group>";

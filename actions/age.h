@@ -16,7 +16,7 @@ namespace coresystem {
     virtual void update (emitter* em, particle* p, float dt)
     {
       if (p->isDead == false) {
-        p->lifetime--;
+        p->lifetime -= 1;
         if (p->lifetime <= 0) {
           p->isDead = true;
         }

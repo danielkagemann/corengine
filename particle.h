@@ -10,7 +10,7 @@ namespace coresystem
     sf::Vector2f    velocity;
     float           scalefactor;
     sf::Color       color;
-    int             lifetime;
+    float           lifetime;
     float           angle;
     float           angleVelo;
     
@@ -28,7 +28,7 @@ namespace coresystem
       velocity    = sf::Vector2f(0.f,0.f);
       scalefactor = 1.f;
       color    	  = sf::Color(254,254,254);
-      lifetime 	  = 1;
+      lifetime 	  = 1.f;
       angle    	  = 0.f;
       angleVelo	  = 0.f;
       isDead   	  = true;
